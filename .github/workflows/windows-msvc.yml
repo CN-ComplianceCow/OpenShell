@@ -84,7 +84,7 @@ jobs:
       - name: Install cargo-nextest
         run: mise install --locked github:nextest-rs/nextest
       - name: Cache Rust target and registry
-        uses: Swatinem/rust-cache@6323deb102c322ba6fcbdcafc7e3dddab59af2b6 # v2.9.2
+        uses: Swatinem/rust-cache@d1527c8f67ef9af357290475d4af4b0fab8f12e0 # v2.9.3
         env:
           # Keep rust-cache's cargo metadata calls independent of the compiler
           # wrapper; build steps still inherit sccache from the job.
@@ -146,7 +146,7 @@ jobs:
       - name: Install cargo-nextest
         run: mise install --locked github:nextest-rs/nextest
       - name: Cache Rust target and registry
-        uses: Swatinem/rust-cache@6323deb102c322ba6fcbdcafc7e3dddab59af2b6 # v2.9.2
+        uses: Swatinem/rust-cache@d1527c8f67ef9af357290475d4af4b0fab8f12e0 # v2.9.3
         env:
           RUSTC_WRAPPER: ""
         with:
@@ -201,7 +201,7 @@ jobs:
           rustup toolchain install
           rustup target add ${{ matrix.rust_target }}
       - name: Cache Rust target and registry
-        uses: Swatinem/rust-cache@6323deb102c322ba6fcbdcafc7e3dddab59af2b6 # v2.9.2
+        uses: Swatinem/rust-cache@d1527c8f67ef9af357290475d4af4b0fab8f12e0 # v2.9.3
         env:
           RUSTC_WRAPPER: ""
         with:
